@@ -22,9 +22,10 @@ public class Menu {
     }
 
     public Food getMenuItemById(int id) {
-    	// your code goes here
-        if (id >= 0 && id < menuItems.size()) {
-            return menuItems.get(id);
+        for (Food food : menuItems) {
+            if (food.getId() == id) {
+                return food;
+            }
         }
         return null;
     }
